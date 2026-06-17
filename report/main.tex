@@ -108,7 +108,7 @@ informa las decisiones de diseño.}
 \section{Exploración Geométrica y Reducción de Dimensionalidad}
 
 Se contrastó un método lineal (PCA) frente a dos técnicas de variedades múltiples
-(t-SNE y UMAP), proyectando el espacio MFCC estandarizado a dos y tres dimensiones
+(t-SNE~\cite{tsne} y UMAP~\cite{umap}), proyectando el espacio MFCC estandarizado a dos y tres dimensiones
 (Fig.~\ref{fig:dimred2d}). El análisis de varianza reveló que PCA requiere siete
 componentes para retener el 90\,\% de la varianza y once para el 95\,\%; en dos
 dimensiones retiene apenas el 67{.}1\,\% y en tres el 76{.}7\,\%
@@ -169,7 +169,7 @@ separable.
 Se implementaron dos paradigmas distintos sobre el espacio PCA que retiene el 90\,\%
 de la varianza (7D): un modelo probabilístico (\emph{Gaussian Mixture Model}, GMM) y
 uno basado en densidad (DBSCAN). Para el GMM se barrió $k \in [2,10]$ evaluando BIC,
-AIC, Silhouette, Davies--Bouldin y Calinski--Harabasz; para DBSCAN se seleccionó
+AIC, Silhouette~\cite{silhouette}, Davies--Bouldin y Calinski--Harabasz; para DBSCAN se seleccionó
 $\varepsilon$ mediante el codo del grafo de $k$-distancias y un barrido que reporta
 número de clústeres, fracción de ruido y Silhouette.
 
@@ -230,7 +230,7 @@ Salida         & 5   & softmax & 325 \\
 \end{table}
 
 \textbf{Estrategia de regularización.} Se estudió el efecto de la posición relativa
-de las capas de Dropout y Batch Normalization sobre la estabilidad de las curvas de
+de las capas de Dropout~\cite{dropout} y Batch Normalization~\cite{batchnorm} sobre la estabilidad de las curvas de
 aprendizaje (Fig.~\ref{fig:curves}), comparando cinco configuraciones del bloque
 oculto. El análisis evidenció que el factor determinante de la estabilidad es la
 \emph{presencia de Dropout}, no su orden relativo: las tres variantes con Dropout
@@ -252,7 +252,7 @@ Dropout sobreajustan.}
 \end{figure*}
 
 \textbf{Benchmarking.} El MLP se comparó contra dos modelos de árboles potenciados por
-gradiente (XGBoost y LightGBM), evaluando F1-Score macro y matrices de confusión
+gradiente (XGBoost~\cite{xgboost} y LightGBM~\cite{lightgbm}), evaluando F1-Score macro y matrices de confusión
 (Fig.~\ref{fig:cm}) con validación agrupada por \texttt{recording\_id}
 (Tabla~\ref{tab:bench}). El mejor desempeño correspondió a \textbf{LightGBM}
 (F1-macro de prueba $=0{.}441$). El nivel global (F1-macro $\approx 0{.}43$--$0{.}44$)
