@@ -1,0 +1,15 @@
+# Proyecto 2 - Clasificación de Señales Eco-Acústicas (CS3061, UTEC)
+# Entorno: conda env "p2ml" con Python 3.11
+# Las versiones exactas se congelarán con `pip freeze` tras la instalación.
+
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+umap-learn
+xgboost
+lightgbm
+tensorflow
+plotly
+tabulate

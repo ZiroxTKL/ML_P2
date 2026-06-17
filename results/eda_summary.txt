@@ -1,0 +1,33 @@
+============================================================
+EDA — Dataset eco-acústico (Proyecto 2, CS3061)
+============================================================
+train: 1906 obs x 68 cols
+test : 477 obs x 68 cols
+Espacio de características: X in R^64 (mel_0 .. mel_63)
+Valores faltantes (train): 0
+Valores faltantes (test) : 0
+recording_id duplicados (train): 309
+
+--- Distribución de species_id (train) ---
+  10 Leptodactylus discodactylus      (Anfibio ):  277  (14.5 %)
+  12 Osteocephalus taurinus           (Anfibio ):  277  (14.5 %)
+  17 Chiroxiphia lineata              (Ave     ):  521  (27.3 %)
+  18 Saltator grossus                 (Ave     ):  278  (14.6 %)
+  23 Pheucticus chrysopeplus          (Ave     ):  553  (29.0 %)
+  Ratio de desbalance (max/min): 2.00
+
+--- Indicador is_tp (True Positive verificado) ---
+  Tasa global de TP (train): 0.132  (252 de 1906)
+  10 Leptodactylus discodactylus     : TP= 38/277  (0.137)
+  12 Osteocephalus taurinus          : TP= 44/277  (0.159)
+  17 Chiroxiphia lineata             : TP= 51/521  (0.098)
+  18 Saltator grossus                : TP= 37/278  (0.133)
+  23 Pheucticus chrysopeplus         : TP= 82/553  (0.148)
+
+--- songtype_id (train) ---
+  songtype 1: 1367
+  songtype 4: 539
+
+--- Coeficientes MFCC (train) ---
+  rango global: [-1.585, 5.847]
+  media global: 0.338 | std global: 0.929

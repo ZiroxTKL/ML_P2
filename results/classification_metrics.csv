@@ -1,0 +1,4 @@
+modelo,F1_macro_val,F1_macro_test,F1_weighted_test,accuracy_test,F1_macro_test_isTP
+MLP,0.3877,0.4309,0.4333,0.4319,0.3348
+XGBoost,0.3923,0.4188,0.4352,0.4361,0.4023
+LightGBM,0.3731,0.4406,0.4542,0.4528,0.4546

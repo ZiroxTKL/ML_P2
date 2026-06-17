@@ -1,0 +1,43 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+.pdfvenv/
+
+# --- Cachés de herramientas ---
+.cache/
+.pytest_cache/
+*.log
+
+# --- Sistema ---
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# --- LaTeX (artefactos de compilación) ---
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.lof
+report/*.lot
+report/*.synctex.gz
+report/*.fls
+report/*.fdb_latexmk
+report/*.bbl
+report/*.blg
+
+# --- Artefactos binarios regenerables (se recrean con run_all.py) ---
+results/*.keras
+results/*.joblib
+results/*.npz
+
+# NOTA: data/, figures/ y los .csv/.md/.txt de results/ SÍ se versionan
+# (pequeños y necesarios para reproducir el informe). Los modelos y .npz se
+# regeneran ejecutando el pipeline.

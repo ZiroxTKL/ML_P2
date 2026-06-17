@@ -1,0 +1,4 @@
+zona,n,porcentaje,exactitud,tasa_is_tp
+Confianza (≥85 %),1,0.2,1.0,0.0
+Incertidumbre (40–85 %),329,69.0,0.4742,0.1277
+Rechazo (<40 %),147,30.8,0.4014,0.1565
